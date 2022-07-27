@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ClassDemo8" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Click the box" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1T-vT-Iop">
+                                <rect key="frame" x="110" y="108" width="194" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iLo-aJ-mR3">
+                                <rect key="frame" x="157" y="398" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="l12-gt-kSF" appends="YES" id="XcH-l7-rDQ"/>
+                                    <outletCollection property="gestureRecognizers" destination="1uJ-5g-kgN" appends="YES" id="Wc5-au-Fhz"/>
+                                    <outletCollection property="gestureRecognizers" destination="c4X-5y-fdY" appends="YES" id="fBs-DB-4y8"/>
+                                    <outletCollection property="gestureRecognizers" destination="5mf-iD-2pm" appends="YES" id="3si-Ad-m4J"/>
+                                    <outletCollection property="gestureRecognizers" destination="ayx-Ax-Lbx" appends="YES" id="BtC-GO-r0C"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="boxLabel" destination="Z1T-vT-Iop" id="iG9-8z-qAg"/>
+                        <outlet property="viewBox" destination="iLo-aJ-mR3" id="rD8-QW-T1Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="l12-gt-kSF">
+                    <connections>
+                        <action selector="handleDragGesture:" destination="BYZ-38-t0r" id="J8N-jF-JK2"/>
+                    </connections>
+                </panGestureRecognizer>
+                <tapGestureRecognizer id="1uJ-5g-kgN">
+                    <connections>
+                        <action selector="recognizeTapGestureWithRecognizer:" destination="BYZ-38-t0r" id="Liz-WE-Xzv"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="c4X-5y-fdY">
+                    <connections>
+                        <action selector="recognizeLongPressedGestureWithRecognizer:" destination="BYZ-38-t0r" id="F56-ao-CF5"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <rotationGestureRecognizer id="5mf-iD-2pm">
+                    <connections>
+                        <action selector="recognizeRotateGestureWithRecognizer:" destination="BYZ-38-t0r" id="Ite-nv-PGn"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <pinchGestureRecognizer id="ayx-Ax-Lbx">
+                    <connections>
+                        <action selector="recognizePinchGestureWithRecognizer:" destination="BYZ-38-t0r" id="OOI-0M-2nM"/>
+                    </connections>
+                </pinchGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
